@@ -1,2 +1,0 @@
-# LMD
-Local Mahalanobis distance
