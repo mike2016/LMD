@@ -24,7 +24,7 @@ faultOccTime = t[data.ft_index]
 
 
 # initiate and train LMD model 
-lmdM = LMD(alpha=0.99,minR=1.68,Ulimit=2,EPDweight = 0.5)
+lmdM = LMD(alpha=0.99,minR='auto',Ulimit=2,EPDweight = 0.5)
 lmdM.fit(ref)   
 
 
@@ -61,3 +61,5 @@ ax1 = plt.subplot2grid(layout, (1, 0))
 ax1.plot(Depd,label='EPD Cusum result',color='c')
 ax1.plot(controlLimit*np.ones(len(Dl)),label='control limit',color='r')
 ax1.legend(loc="upper left")
+
+
